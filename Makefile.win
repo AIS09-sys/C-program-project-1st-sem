@@ -1,0 +1,40 @@
+# Project: CBS
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = C:\WinLibs\mingw64\bin\g++.exe
+CC       = C:\WinLibs\mingw64\bin\gcc.exe
+WINDRES  = C:\WinLibs\mingw64\bin\windres.exe
+OBJ      = auth.o constant.o function.o payment.o main.o
+LINKOBJ  = auth.o constant.o function.o payment.o main.o
+LIBS     = -L"C:/WinLibs/mingw64/lib" -L"D:/CBS/lib" -lraylib -lopengl32 -lgdi32 -lwinmm
+INCS     = -I"C:/WinLibs/mingw64/include" -I"D:/CBS/include"
+CXXINCS  = -I"C:/WinLibs/mingw64/include/c++" -I"C:/WinLibs/mingw64/x86_64-w64-mingw32/include" -I"D:/CBS/include"
+BIN      = CBS.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+auth.o: auth.c
+	$(CC) -c auth.c -o auth.o $(CFLAGS)
+
+constant.o: constant.c
+	$(CC) -c constant.c -o constant.o $(CFLAGS)
+
+function.o: function.c
+	$(CC) -c function.c -o function.o $(CFLAGS)
+
+payment.o: payment.c
+	$(CC) -c payment.c -o payment.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
