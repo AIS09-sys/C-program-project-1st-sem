@@ -57,44 +57,6 @@ CBS/
 
 ---
 
-# 📸 Application Screenshots
-
-## Login Screen
-
-![Login](ss/screenshot001.png)
-
----
-
-## Registration Screen
-
-![Registration](ss/screenshot000.png)
-
----
-
-## Home Screen
-
-![Home](ss/screenshot005.png)
-
----
-
-## Seat Booking
-
-![Seat Booking](ss/screenshot002.png)
-
----
-
-## My Bookings
-
-![My Bookings](ss/screenshot003.png)
-
----
-
-## Loyalty Rewards
-
-![Rewards](ss/screenshot004.png)
-
----
-
 # 🛠 Technologies Used
 
 - **Programming Language:** C
